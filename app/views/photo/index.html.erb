@@ -2,7 +2,7 @@
 <ul>
 	<% @photo.each do |photo| %>
 		<li>
-			<img src="<%= url_for(photo_path, id: photo.id) %>" />
+			<img src="<%= url_for(controller: "photo", action: "photo_large", id: photo.id) %>" /> 
 		</li>
 	<% end %>
 </ul>

@@ -16,15 +16,15 @@ class Photo < ActiveRecord::Base
 			img_original = img_large = img_thumbnail = img
 			img_original.strip
 			img_original.quality("75%")
-			self.original = img_original.to_blob
+			#self.original = img_original.to_blob
 
-			img_large.resize("300x200>").strip
+			img_large.resize("600x500>").strip
 			img_large.quality("75%")
 			self.large = img_large.to_blob
 
-			img_thumbnail.resize("80x80").strip
-			img_thumbnail.quality("75%")
-			self.thumbnail = img_thumbnail.to_blob
+			#img_thumbnail.resize("80x80").strip
+			#img_thumbnail.quality("75%")
+			#self.thumbnail = img_thumbnail.to_blob
 		end
 	end
 

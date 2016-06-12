@@ -1,7 +1,10 @@
 class PhotoController < ApplicationController
 	def index
+		@photo = Photo.all
+	end
 
-		@photo = Photo.find.order(:id)
+	def show
+		@photo = Photo.find(params[:id])
 	end
 
 	def get
@@ -35,9 +38,6 @@ class PhotoController < ApplicationController
 		send_data(@photo.thumbnail, filename: @photo.name, type: @photo.content_type, disposition: "inline")
 	end
 
-	def show
-		@photo = Photo.find(params[:id])
-	end
 
 	private
 	def photo_params
