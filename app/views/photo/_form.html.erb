@@ -1,0 +1,6 @@
+<%= form_for(:photo, url: { :controller => "photo", :action => 'save' }, html: { multipart: true }) do |form| %>
+	<%#= form.fields_for :photo do |upload_photo| %>
+		Upload: 	<%= form.file_field :uploaded_photo %><br />
+	<%# end %>
+	<%= form.submit("Upload") %>
+<% end %>

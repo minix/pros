@@ -1,0 +1,5 @@
+<p><%= notice %></p>
+<h3><%= @photo.comment %></h3>
+<img src="<%= url_for(controller: "photo", action: 'photo', id: @photo.id) %>" />
+<img src="<%= url_for(controller: "photo", action: 'photo_large', id: @photo.id) %>" />
+<img src="<%= url_for(controller: "photo", action: 'photo_thumbnail', id: @photo.id) %>" />

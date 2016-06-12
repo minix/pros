@@ -1,0 +1,13 @@
+<%= form_for :user, url: { controller: "account", action: "login"} do |f| %>
+	<ul class="login_nav">
+		<li><%= f.text_field :name, class: "name_form", autocomplete: "on", placeholder: "Enter Your Email Address"%></li>
+		<li><%= f.password_field :passwd, class: "password_form", placeholder: "Enter Your Password" %></li>
+		<li><%= submit_tag "Login", class: "login_button" %></li>
+	</ul>
+	<div class="other_part">
+		<ul>
+			<li class="signup_button"><%= link_to 'Signup', :controller => "user", :action => "signup" %></li> 
+			<li class="lost_password"><%= link_to 'Lost password', action: "forgot_password" %> </li>
+		</ul>
+	</div>
+<% end %>

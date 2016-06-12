@@ -1,0 +1,11 @@
+<h1>List user</h1>
+<ul>
+	<% @user.each do |per| %>
+		<li>
+			<%= per.email %> 
+			<%= link_to "Delete", per, :confirm => "Are you Sure", method: :delete %>
+		</li>
+	<% end %>
+</ul>
+
+
